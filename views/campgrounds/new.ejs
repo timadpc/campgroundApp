@@ -1,0 +1,48 @@
+<% layout('/layouts/boilerplate') %>
+
+
+<div class="container mt-5">
+  <div class="row mb-5" >
+
+    <form class="needs-validation" action="/campgrounds" method="post" enctype="multipart/form-data" novalidate>
+      <div class="col-6 offset-3">
+
+        <h1 class="mb-3">New Campground</h1>
+
+        <div class="mb-3">
+          <label for="tit" class="form-label">Title:</label>
+          <input class="form-control " type="text" placeholder="Title" name="campground[title]" id="tit" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="loc">Location:</label>
+          <input class="form-control" type="text" placeholder="Location" name="campground[location]" id="loc" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="price">Price:</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input placeholder=".00" id="price" name="campground[price]" type="number" class="form-control" required>
+          </div>
+        </div>
+        <label class="form-label" for="dscr">Description:</label>
+        <textarea rows="5" class="form-control mb-3" type="text" placeholder="Description"
+          name="campground[description]" id="dscr" required></textarea>
+
+        <div class="mb-4">
+          <label for="name" class="form-label">Add images:</label>
+          <input class="form-control" type="file" id="name" name="image" multiple>
+        </div>
+
+        <button class="btn btn-dark mx-auto c-btn">Add</button>
+    </form>
+  </div>
+  </div>
+</div>

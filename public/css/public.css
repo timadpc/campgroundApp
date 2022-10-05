@@ -1,0 +1,85 @@
+/* all */
+.border {
+  border: solid red;
+}
+
+
+.c-btn {
+  width: 150px;
+  height: 35px;
+  padding-top: 3.5px;
+  max-width: 100%;
+}
+
+
+/* camp update */
+
+.c-thumbnail-images {
+  max-width: 150px;
+}
+
+
+/* camp show page */
+
+.c-carousel {
+  height: 500px;
+}
+
+.c-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.position {
+  animation: fade 2s;
+  bottom: 20px;
+}
+
+@keyframes fade {
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .show-media-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .show-media-blocks {
+    align-self: center;
+    width: 90vw;
+    margin: auto;
+  }
+
+  .index-media-container {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .home-media-nav-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    margin: auto;
+  }
+
+  .home-media-nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .home-media-container {
+    max-width: 100%;
+  }
+}

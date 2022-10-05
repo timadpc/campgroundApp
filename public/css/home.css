@@ -1,0 +1,47 @@
+.border {
+  border: solid red;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(57, 41, 0, 0.3)), url(https://res.cloudinary.com/dtr2lufqd/image/upload/v1664209312/admin-side/wallpaper-home_vwu2yn.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0.08rem 0.1rem rgba(0, 0, 0, 0.5);
+
+}
+
+.cover-container {
+  max-width: 60vw;
+  justify-content: space-between;
+}
+
+.nav-link {
+  padding: 0.25rem 0;
+  margin-left: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom-color: white;
+}
+
+.nav-link.active {
+  color: white;
+  border-bottom: 1px solid white;
+
+}
+
+
+.btn-secondary {
+  text-shadow: none;
+}
+
+.c-absolute-1 {
+  position: absolute;
+  left: 10vw;
+  top: 20vh;
+}

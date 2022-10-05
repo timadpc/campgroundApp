@@ -1,0 +1,52 @@
+<% layout('./layouts/boilerplate') %>
+
+
+<div id="map" style=" height: 380px; margin-top: -50px; margin-bottom: 50px; justify-self: stretch;"></div>
+
+<div class="container mt-5">
+  <div class="col-6 offset-3 mb-5 index-media-container">
+  <h1 class="mb-5">All Campgrounds</h1>
+  
+  <% for(let i=campgrounds.length-1;i>0;i--) {%> 
+
+      <div class="card bg-dark mb-2">
+        <div class="row">
+          <div class="col-md-4">
+            <% if(campgrounds[i].images.length) {%>
+              <div style="height: 200px; background: url(<%=campgrounds[i].images[0].url%>) no-repeat center center; background-size: cover;"></div>
+            <% } else{ %>
+              <div style="height: 200px; background: url('https://res.cloudinary.com/dtr2lufqd/image/upload/v1664209465/admin-side/no-img_j2b72r.jpg') no-repeat center center;
+                background-size: cover;"></div>
+            <% } %>
+          </div>
+
+
+          <div class="col-md-8" style="padding: 20px;">
+            <h5 class="card-title text-light mt-2">
+              <%= campgrounds[i].title %>
+            </h5>
+
+            <i class="card-text text-light text-decoration-underline">
+              <%= campgrounds[i].location %>
+            </i>
+
+            <p class="card-title text-light mt-2">
+<%= campgrounds[i].description.substring(0,110) %> ...
+            </p>
+
+            <a href="/campgrounds/<%= campgrounds[i]._id %> " class="btn btn-light c-btn">See details</a>
+          </div>
+        </div>
+      </div>
+
+    <% } %>
+  </div>
+</div>
+
+
+<script>
+    const mapToken = '<%-process.env.MAPBOX_TOKEN %>';
+    const campgrounds = {features: <%- JSON.stringify(campgrounds) %>}  
+</script>
+
+<script src="/js/indexPageCluster.js"></script>

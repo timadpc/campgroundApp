@@ -1,0 +1,24 @@
+.user-card {
+  border-radius: 10px;
+  max-width: 80vw;
+  width: 350px;
+  font-weight: 700;
+  /* text-shadow: 0.05rem 0.05rem 0.1rem rgba(255, 255, 255, 0.5); */
+}
+
+.login-card-image {
+  /* border: 2px solid white; */
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://res.cloudinary.com/dtr2lufqd/image/upload/v1664209214/admin-side/wallpaper-login_l2xzvt.jpg) center;
+  /* background-position: center; */
+  background-size: cover;
+  /* color: white; */
+
+}
+
+.register-card-image {
+  /* border: 2px solid white; */
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://res.cloudinary.com/dtr2lufqd/image/upload/v1664209241/admin-side/wallpaper-reg_jfmx74.jpg);
+  background-size: cover;
+}
